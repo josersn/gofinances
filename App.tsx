@@ -30,7 +30,7 @@ export default function App() {
   return (
     <ThemeProvider theme={Theme}>
       <StatusBar style="light" />
-      <CategorySelect />
+      <Register />
     </ThemeProvider>
   );
 }
