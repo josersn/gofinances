@@ -3,6 +3,8 @@ import { ThemeProvider } from "styled-components";
 import { StatusBar } from 'expo-status-bar';
 import AppLoading from "expo-app-loading";
 
+import { NavigationContainer } from '@react-navigation/native';
+
 import {
   useFonts,
   Poppins_400Regular,
@@ -11,9 +13,7 @@ import {
 } from "@expo-google-fonts/poppins";
 
 import Theme from "./src/global/styles/theme";
-import { Dashboard } from './src/screens/Dashboard';
-import { Register } from './src/screens/Register';
-import { CategorySelect } from './src/screens/CategorySelect';
+import { AppRoutes } from './src/routes/app.routes';
 
 export default function App() {
 
@@ -29,8 +29,10 @@ export default function App() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <StatusBar style="light" />
-      <Register />
+      {/* <StatusBar style="light" /> */}
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
