@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/native';
-import { TouchableOpacity } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import { RFValue } from 'react-native-responsive-fontsize';
+import { RectButton } from 'react-native-gesture-handler';
 
 
 interface TypeProps {
@@ -10,12 +10,12 @@ interface TypeProps {
 }
 
 
-export const Container = styled(TouchableOpacity) <TypeProps>`
+export const Container = styled(RectButton) <TypeProps>`
   width: 48%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-width: ${({ isActive }) => isActive ? 0 : "1.0" }px;
+  border-width: ${({ isActive }) => isActive ? 0 : "1" }px;
 
   border-style:  solid;
   border-color: ${({ theme }) => theme.colors.text};
